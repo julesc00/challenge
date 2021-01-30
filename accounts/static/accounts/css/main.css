@@ -1,7 +1,14 @@
-h1 {
-    color: darkred;
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 nav ul li:hover {
     background-color: #e5e5e5;
 }
+
