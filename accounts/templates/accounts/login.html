@@ -9,7 +9,7 @@
                 <div class="col s8 offset-s2">
                     <div class="card indigo lighten-4" style="border-radius: 15px">
                         <div class="card-content">
-                            <h4 class="center-align indigo-text text-darken-4">Registro</h4>
+                            <h4 class="center-align indigo-text text-darken-4">Ingresar</h4>
                             <div class="row">
                                 <div class="col s12">
                                     <form action="" method="POST">
@@ -33,10 +33,12 @@
 
                                     </form>
                                     <div class="row">
+                                        <div style="margin-top: 20px; margin-bottom: 20px" class="divider"></div>
                                         <span style="margin-top: 15px" class="indigo-text text-darken-4 center-align">
                                             ¿No estás registrado aún?
-                                            <a href="{% url 'accounts:login-page' %}">Registrar</a>
+                                            <a href="{% url 'accounts:register-page' %}">Registrar</a>
                                         </span>
+                                        <span>¿Olvidaste tu contraseña? <a href="#">Resetear Contraseña</a></span>
                                     </div>
                                 </div>
                             </div>

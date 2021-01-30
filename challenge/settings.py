@@ -9,8 +9,11 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import locale
+from decouple import config
 from pathlib import Path
+
+config.encoding = locale.getpreferredencoding(False)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '2p%6eb8ge#b-(o*^zom@6qexcivs+!53z2*)usm19_rmo90@gl'
+SECRET_KEY = "2p%6eb8ge#b-(o*^zom@6qexcivs+!53z2*)usm19_rmo90@gl"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -80,9 +83,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': "ytxjhaal",
-        'USER': 'ytxjhaal',
-        'PASSWORD': '5yRzEGE5aTb88peB2_YGe87wpm1rCkhD',
-        'HOST': 'ziggy.db.elephantsql.com',
+        'USER': "ytxjhaal",
+        'PASSWORD': "5yRzEGE5aTb88peB2_YGe87wpm1rCkhD",
+        'HOST': "ziggy.db.elephantsql.com",
         'PORT': '5432'
     }
 }
