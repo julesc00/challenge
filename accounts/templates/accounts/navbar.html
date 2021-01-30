@@ -2,5 +2,14 @@
 {% load static %}
 
 {% block content %}
-    <h1>Navbar</h1>
+    <section>
+    <nav style="background-color: #14213D;">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo white-text">Challenge App</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="white-text" href="{% url 'accounts:login-page' %}">Salir</a></li>
+            </ul>
+        </div>
+    </nav>
+    </section>
 {% endblock %}
