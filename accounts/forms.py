@@ -5,6 +5,13 @@ from django.contrib.auth.models import User
 from .models import Usuario
 
 
+class CustomerForm(forms.ModelForm):
+    class Meta:
+        model = Usuario
+        fields = "__all__"
+        exclude = ["user"]
+
+
 class CreateUserForm(UserCreationForm):
     class Meta:
         model = User
