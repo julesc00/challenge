@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout
+from django.contrib.auth.decorators import login_required
 
 from .forms import CreateUserForm
+from .decorators import unauthenticated_user, allowed_users
 
 
+@unauthenticated_user
 def register_page(request):
     form = CreateUserForm()
 
@@ -28,6 +31,7 @@ def register_page(request):
     return render(request, "accounts/register.html", context)
 
 
+@unauthenticated_user
 def login_page(request):
     """Log in a user"""
     if request.method == "POST":
@@ -50,6 +54,7 @@ def login_page(request):
     return render(request, "accounts/login.html", context)
 
 
+@login_required(login_url="accounts:login-page")
 def user_page(request):
     context = {
         "title": "Página de Usuario"
