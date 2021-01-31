@@ -6,6 +6,7 @@ from django.core.mail import BadHeaderError
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import Group
 
 import emails
 

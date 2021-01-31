@@ -40,3 +40,11 @@ F
 accounts/decorators.py,c/8/c8921ffe21d9ae7904f234c7d677370d5ea8e0bd
 W
 'accounts/templates/accounts/navbar.html,5/f/5f10a7bbee67f7f8a3958197cad4e41b738e25c0
+a
+1accounts/templates/accounts/email_w_password.html,a/4/a4f8e9066020bd0f3648d6dce6910d0cce0b32ba
+4
+.env,3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
+>
+challenge/.env,8/5/8594830ff4dc11a2d3ce76f017b0cbdf9b7c56df
+F
+challenge/settings.ini,b/7/b7302ff7fee2c69104f9e305b697f0de997e513d
