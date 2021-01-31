@@ -10,7 +10,7 @@ from django.contrib.auth.models import Group
 
 import emails
 
-from .models import Usuario
+from .models import Usuario, LoginLog
 from .forms import CreateUserForm
 from .decorators import unauthenticated_user, allowed_users
 
@@ -43,7 +43,7 @@ def register_page(request):
             try:
                 # Send the email
                 r = message.send(
-                    to=user_email,
+                    to="julesc00@protonmail.com",
                     smtp={
                         "host": "email-smtp.us-east-1.amazonaws.com",
                         "port": 587,
@@ -92,10 +92,12 @@ def login_page(request):
 @login_required(login_url="accounts:login-page")
 def user_page(request):
     usuario = Usuario.objects.all()
+    logs = LoginLog.objects.all()
 
     context = {
         "title": "Página de Usuario",
-        "usuario": usuario
+        "usuario": usuario,
+        "logs": logs
     }
 
     return render(request, "accounts/user.html", context)

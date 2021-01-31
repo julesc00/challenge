@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.models import Group
 from django.dispatch import receiver
 
-from .models import Usuario
+from .models import Usuario, LoginLog
 
 
 def user_profile(sender, instance, created, **kwargs):
@@ -24,14 +24,12 @@ post_save.connect(user_profile, sender=User)
 
 @receiver(user_logged_in)
 def log_user_login(sender, request, user, **kwargs):
-    print("User logged in")
+    print(f"User {user.username} logged in on {user.last_login}")
+    log = user.last_login
+    log
+
+    LoginLog.objects.create(
+        login_log=log
+    )
 
 
-@receiver(user_login_failed)
-def log_user_login_failed(sender, request, user, **kwargs):
-    print("User failed to log in.")
-
-
-@receiver(user_logged_out)
-def log_user_logout(sender, request, user, **kwargs):
-    print("User logged out")
