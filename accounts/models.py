@@ -20,7 +20,7 @@ class Usuario(models.Model):
 
 class LoginLog(models.Model):
     """Record user login logs."""
-    owner = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
     login_log = models.CharField(max_length=100, null=True, blank=True)
     date_created = models.DateTimeField(auto_now=True)
 
