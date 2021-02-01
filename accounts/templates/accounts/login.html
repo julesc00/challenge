@@ -32,13 +32,18 @@
                                         >
 
                                     </form>
-                                    <div class="row">
+                                    <div class="row" style="display: flex; flex-direction: column ">
                                         <div style="margin-top: 20px; margin-bottom: 20px" class="divider"></div>
-                                        <span style="margin-top: 15px" class="indigo-text text-darken-4 center-align">
+
+                                        <p style="margin-top: 15px" class="indigo-text text-darken-4 center-align">
                                             ¿No estás registrado aún?
                                             <a href="{% url 'accounts:register-page' %}">Registrar</a>
-                                        </span>
-                                        <span>¿Olvidaste tu contraseña? <a href="#">Resetear Contraseña</a></span>
+                                        </p>
+                                        <p style="margin-top: 15px" class="indigo-text text-darken-4 center-align">
+                                            ¿Olvidaste tu contraseña?
+                                            <a href="{% url 'password_reset' %}">Resetear Contraseña</a>
+                                        </p>
+
                                     </div>
                                 </div>
                             </div>

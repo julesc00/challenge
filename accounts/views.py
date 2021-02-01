@@ -7,8 +7,9 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
-
+from django.core.mail import send_mail
 import emails
+
 
 from .models import Usuario, LoginLog
 from .forms import CreateUserForm
@@ -32,24 +33,22 @@ def register_page(request):
             print(saved_password)
 
             user.save()
-
             #Prepare email
             message = emails.html(
-                html=f"<h4>Gracias por registrarse con nosotros</h4>"
-                     f"<br><p>Contraseña: <strong>{saved_password}</strong></p>",
+                html=f"<h4>Contraseña: <strong>{saved_password}</strong></p></h4>",
                 subject="Enviado desde Challenge App",
                 mail_from="julesc003@gmail.com"
             )
             try:
                 # Send the email
                 r = message.send(
-                    to="julesc00@protonmail.com",
+                    to="julesc003@gmail.com",
                     smtp={
-                        "host": "email-smtp.us-east-1.amazonaws.com",
+                        "host": "smtp.gmail.com",
                         "port": 587,
                         "timeout": 5,
-                        "user": "AKIAQWI6Q2LEBI5P3YWD",
-                        "password": "5yRzEGE5aTb88peB2_YGe87wpm1rCkhD",
+                        "user": "julesc003@gmail.com",
+                        "password": "gbxisrodikjuihxa",
                         "tls": True,
                     },
                 )
