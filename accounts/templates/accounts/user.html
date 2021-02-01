@@ -9,7 +9,32 @@
                 <div class="row">
                     <div class="col s12">
                         <h3 class="indigo-text text-darken-4">Bienvenido <span>{{ request.user|title }}</span></h3>
+                        <div class="divider"></div>
+                        <div style="margin-top: 20px; margin-bottom: 20px; display: flex; flex-direction: column">
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="card" style="border-radius: 15px">
+                                        <div class="card-content">
+                                            <form action="" method="GET">
+                                {% csrf_token %}
+                                <div class="input-field col s12">
+                                    {% for field in my_filter.form %}
+                                    {{ field }}
+                                        {{ field.label }}
+                                    {% endfor %}
 
+
+                                </div>
+                                    <button style=" width: 100%; border-radius: 15px" type="submit" class="btn btn-block amber darken-3 center-align">
+                                        Buscar
+                                    </button>
+                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
                             <table class="striped">
                                 <thead>
                                 <tr>

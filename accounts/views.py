@@ -14,6 +14,7 @@ import emails
 from .models import Usuario, LoginLog
 from .forms import CreateUserForm
 from .decorators import unauthenticated_user, allowed_users
+from .filters import LogFilter
 
 
 @unauthenticated_user
@@ -89,14 +90,19 @@ def login_page(request):
 
 
 @login_required(login_url="accounts:login-page")
+@allowed_users(allowed_roles=["usuarios"])
 def user_page(request):
     usuario = Usuario.objects.all()
-    logs = LoginLog.objects.all()
+    logs = LoginLog.objects.filter(owner=request.user)
+
+    my_filter = LogFilter(request.GET, queryset=logs)
+    logs = my_filter.qs
 
     context = {
         "title": "Página de Usuario",
         "usuario": usuario,
-        "logs": logs
+        "logs": logs,
+        "my_filter": my_filter
     }
 
     return render(request, "accounts/user.html", context)

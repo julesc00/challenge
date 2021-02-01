@@ -48,3 +48,13 @@ a
 challenge/.env,8/5/8594830ff4dc11a2d3ce76f017b0cbdf9b7c56df
 F
 challenge/settings.ini,b/7/b7302ff7fee2c69104f9e305b697f0de997e513d
+@
+accounts/apps.py,1/0/105856a1a16213228e6bf93c0ff567a0b51380c4
+i
+9accounts/templates/registration/password_reset_email.html,f/b/fbb21ed1f327881e6c1591c44cb396516970e7f8
+d
+4accounts/templates/accounts/password_reset_done.html,3/0/30e4a3ab4de634117cbd21c19f92c047fc45cd5d
+d
+4accounts/templates/accounts/password_reset_sent.html,d/a/da9f120e941ae919d7278f78368e9cecad751189
+d
+4accounts/templates/accounts/password_reset_form.html,0/b/0b767a1a04a85da1af2f0378be00abd2ee96eedc
