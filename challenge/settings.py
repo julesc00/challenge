@@ -83,9 +83,9 @@ WSGI_APPLICATION = 'challenge.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': "ytxjhaal",
-        'USER': "ytxjhaal",
-        'PASSWORD': "5yRzEGE5aTb88peB2_YGe87wpm1rCkhD",
+        'NAME': "loeqaaci",
+        'USER': "loeqaaci",
+        'PASSWORD': "dXJgEbxf00xBlIqQUu1K65extXFsLSH8",
         'HOST': "ziggy.db.elephantsql.com",
         'PORT': '5432'
     }
@@ -114,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 
@@ -143,3 +143,4 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'julesc003@gmail.com'
 EMAIL_HOST_PASSWORD = 'gbxisrodikjuihxa'
+

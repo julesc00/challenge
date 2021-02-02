@@ -5,9 +5,7 @@ body {
     background-color: #e5e5e5;
 }
 
-main {
-    flex: 1 0 auto;
-}
+
 
 nav ul li:hover {
     background-color: #e5e5e5;
